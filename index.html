@@ -837,15 +837,15 @@
   </section>
 
   <!-- ================= RATE CARD (PER-STUDY PRICING) ================= -->
-  <!-- Source: NeuralRad Teleradiology Reporting Rate Card (neuralrad-rate-card.pdf) -->
+  <!-- Source: NeuralRad Comprehensive B2B Rate Card (neuralrad-rate-card.pdf) -->
   <section id="rates" class="py-24 border-t border-slate-800 relative scroll-mt-20" aria-labelledby="rates-heading" hidden>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
           <h2 class="text-xs uppercase font-bold tracking-widest text-brand-400 mb-2">Transparent Pricing</h2>
-          <p id="rates-heading" class="font-display text-3xl sm:text-4xl font-extrabold text-white">Reporting Rate Card (INR)</p>
-          <p class="text-slate-400 text-sm mt-2 max-w-2xl">Reliable 24&times;7 teleradiology reporting by qualified radiologists on BharatPACS. Flat per-study rates for CT, MRI and X-Ray.</p>
+          <p id="rates-heading" class="font-display text-3xl sm:text-4xl font-extrabold text-white">Comprehensive B2B Rate Card (INR)</p>
+          <p class="text-slate-400 text-sm mt-2 max-w-2xl">Per-study reporting rates for CT, MRI and X-Ray, with routine and STAT (under 2 hours) pricing.</p>
         </div>
         <div class="flex items-center gap-2 self-start md:self-auto">
           <a href="/neuralrad-rate-card.pdf" download class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-200 bg-slate-800/90 hover:bg-slate-700/80 border border-slate-700 transition-colors">
@@ -864,22 +864,22 @@
         <div class="glass-card rounded-xl p-4 flex items-start gap-3">
           <i data-lucide="sun" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
           <div>
-            <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Routine Timings</div>
-            <div class="text-white font-semibold mt-0.5">9:00 AM &ndash; 9:00 PM</div>
+            <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Routine Turnaround</div>
+            <div class="text-white font-semibold mt-0.5">Standard queue, typically 24 hours</div>
           </div>
         </div>
         <div class="glass-card rounded-xl p-4 flex items-start gap-3">
-          <i data-lucide="timer" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
+          <i data-lucide="timer" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
           <div>
-            <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Turnaround Time</div>
-            <div class="text-white font-semibold mt-0.5">1 &ndash; 2 Hours</div>
+            <div class="text-xs uppercase font-bold tracking-wider text-slate-400">STAT / Emergency</div>
+            <div class="text-white font-semibold mt-0.5">Priority reports in under 2 hours</div>
           </div>
         </div>
         <div class="glass-card rounded-xl p-4 flex items-start gap-3">
           <i data-lucide="moon" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"></i>
           <div>
-            <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Emergency / Night</div>
-            <div class="text-white font-semibold mt-0.5">After routine hours, decided mutually</div>
+            <div class="text-xs uppercase font-bold tracking-wider text-slate-400">After Hours (10 PM &ndash; 7 AM IST)</div>
+            <div class="text-white font-semibold mt-0.5">1.5&times; base rate for night emergency studies</div>
           </div>
         </div>
       </div>
@@ -903,304 +903,359 @@
             <span class="hidden sm:inline text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-900/60 tabular-nums">2</span>
           </button>
         </div>
-        <div id="rate-panel-ct" role="tabpanel" aria-labelledby="rate-tab-ct" tabindex="0" class="rate-panel">
+        <div id="rate-panel-ct" role="tabpanel" aria-labelledby="rate-tab-ct" tabindex="0" class="rate-panel overflow-x-auto">
           <table class="w-full text-sm text-left">
-            <caption class="sr-only">CT Scan reporting rates in Indian Rupees</caption>
+            <caption class="sr-only">CT Scan reporting rates in Indian Rupees, routine and STAT</caption>
             <thead>
               <tr class="border-b border-slate-800 text-xs uppercase tracking-wider text-slate-400">
                 <th scope="col" class="pl-6 pr-2 py-3 font-bold w-10">#</th>
                 <th scope="col" class="px-3 py-3 font-bold">CT Scan Investigation</th>
-                <th scope="col" class="pl-3 pr-6 py-3 font-bold text-right">Rate (INR)</th>
+                <th scope="col" class="px-3 py-3 font-bold text-right whitespace-nowrap">Routine <span class="block text-[10px] normal-case tracking-normal font-medium text-slate-500">~24 hrs</span></th>
+                <th scope="col" class="pl-3 pr-6 py-3 font-bold text-right whitespace-nowrap text-rose-400">STAT <span class="block text-[10px] normal-case tracking-normal font-medium text-slate-500">&lt; 2 hrs</span></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-800/80 text-slate-300">
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">1</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">NCCT Head</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;200</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;500</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">2</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CECT Head</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;450</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;650</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">3</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">NCCT PNS</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;200</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;500</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">4</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CECT PNS</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;450</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;650</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">5</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">NCCT Temporal Bone</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;500</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">6</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CECT Temporal Bone</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;450</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;650</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">7</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Face</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;500</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">8</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Orbit</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;500</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">9</td>
-                  <th scope="row" class="px-3 py-3 font-medium text-white">CT Spine (Cervical / Dorsal / Lumbar)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;300 <span class="text-slate-500 font-normal text-xs">per region</span></td>
+                  <th scope="row" class="px-3 py-3 font-medium text-white">CT Spine (C+D+L)</th>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350 <span class="text-slate-500 font-normal text-xs">per region</span></td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;500 <span class="text-slate-500 font-normal text-xs">per region</span></td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">10</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">NCCT Neck</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;300</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;450</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;650</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">11</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CECT Neck</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;550</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;750</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">12</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">HRCT / NCCT Chest</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;450</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;650</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">13</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CECT Chest</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;550</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;750</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">14</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">NCCT Abdomen</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;300</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;900</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">15</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CECT Abdomen</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;750</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,100</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">16</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">Triple Phase CECT Abdomen</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;400</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">17</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Urogram</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">18</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">NCCT Pelvis</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;300</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;900</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">19</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CECT Pelvis</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;750</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,100</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">20</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Upper Extremity</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;400</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;450</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;650</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">21</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Lower Extremity</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;400</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;450</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;650</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">22</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Cisternography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;400</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">23</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Coronary Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;1,000</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;1,200</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,800</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">24</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Brain Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">25</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Carotid Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">26</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Pulmonary Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">27</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Renal Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">28</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Upper Limb Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">29</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">CT Lower Limb Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
             </tbody>
           </table>
         </div>
-        <div id="rate-panel-mri" role="tabpanel" aria-labelledby="rate-tab-mri" tabindex="0" class="rate-panel" hidden>
+        <div id="rate-panel-mri" role="tabpanel" aria-labelledby="rate-tab-mri" tabindex="0" class="rate-panel overflow-x-auto" hidden>
           <table class="w-full text-sm text-left">
-            <caption class="sr-only">MRI reporting rates in Indian Rupees</caption>
+            <caption class="sr-only">MRI reporting rates in Indian Rupees, routine and STAT</caption>
             <thead>
               <tr class="border-b border-slate-800 text-xs uppercase tracking-wider text-slate-400">
                 <th scope="col" class="pl-6 pr-2 py-3 font-bold w-10">#</th>
                 <th scope="col" class="px-3 py-3 font-bold">MRI Investigation</th>
-                <th scope="col" class="pl-3 pr-6 py-3 font-bold text-right">Rate (INR)</th>
+                <th scope="col" class="px-3 py-3 font-bold text-right whitespace-nowrap">Routine <span class="block text-[10px] normal-case tracking-normal font-medium text-slate-500">~24 hrs</span></th>
+                <th scope="col" class="pl-3 pr-6 py-3 font-bold text-right whitespace-nowrap text-rose-400">STAT <span class="block text-[10px] normal-case tracking-normal font-medium text-slate-500">&lt; 2 hrs</span></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-800/80 text-slate-300">
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">1</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Brain (Without Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;750</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">2</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Spine &ndash; Cervical / Dorsal / Lumbar (Without Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;350</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;750</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">3</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Brain / Spine (C+D+L) Screening</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;400</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;600</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">4</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Brain (With Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;400</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;650</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;950</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">5</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Spine &ndash; Cervical / Dorsal / Lumbar (With Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;400</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;650</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;950</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">6</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Brain Angiography (MRA)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;900</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">7</td>
-                  <th scope="row" class="px-3 py-3 font-medium text-white">MRI Venogram (MRV)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <th scope="row" class="px-3 py-3 font-medium text-white">MRI Venogram</th>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;900</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">8</td>
-                  <th scope="row" class="px-3 py-3 font-medium text-white">MRI Brain Spectroscopy (MRS)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <th scope="row" class="px-3 py-3 font-medium text-white">MRI Brain Spectroscopy</th>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">9</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Brachial Plexus</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;900</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">10</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Neck / Chest / Abdomen (With Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;750</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,100</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">11</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Whole Abdomen</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;900</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">12</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Enterography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">13</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Single Joint (Knee, Elbow, Wrist, Hip, Ankle, Foot)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;550</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;750</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">14</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Single Joint (With Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;550</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;650</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;950</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">15</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Hand / Arm / Thigh / Leg / Finger / Thumb</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;750</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">16</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Hand / Arm / Thigh / Leg / Finger / Thumb (With Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;650</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;650</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;950</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">17</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Upper Limb Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;650</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">18</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Lower Limb Angiography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;650</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">19</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Cisternography</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;800</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,200</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">20</td>
-                  <th scope="row" class="px-3 py-3 font-medium text-white">MRI Pelvis (Without Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;500</td>
+                  <th scope="row" class="px-3 py-3 font-medium text-white">MRI Pelvis</th>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;600</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;900</td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">21</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">MRI Pelvis (With Contrast)</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;550</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;750</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;1,100</td>
                 </tr>
             </tbody>
           </table>
         </div>
-        <div id="rate-panel-xray" role="tabpanel" aria-labelledby="rate-tab-xray" tabindex="0" class="rate-panel" hidden>
+        <div id="rate-panel-xray" role="tabpanel" aria-labelledby="rate-tab-xray" tabindex="0" class="rate-panel overflow-x-auto" hidden>
           <table class="w-full text-sm text-left">
-            <caption class="sr-only">X-Ray reporting rates in Indian Rupees</caption>
+            <caption class="sr-only">X-Ray reporting rates in Indian Rupees, routine and STAT</caption>
             <thead>
               <tr class="border-b border-slate-800 text-xs uppercase tracking-wider text-slate-400">
                 <th scope="col" class="pl-6 pr-2 py-3 font-bold w-10">#</th>
                 <th scope="col" class="px-3 py-3 font-bold">X-Ray Investigation</th>
-                <th scope="col" class="pl-3 pr-6 py-3 font-bold text-right">Rate (INR)</th>
+                <th scope="col" class="px-3 py-3 font-bold text-right whitespace-nowrap">Routine <span class="block text-[10px] normal-case tracking-normal font-medium text-slate-500">~24 hrs</span></th>
+                <th scope="col" class="pl-3 pr-6 py-3 font-bold text-right whitespace-nowrap text-rose-400">STAT <span class="block text-[10px] normal-case tracking-normal font-medium text-slate-500">&lt; 2 hrs</span></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-800/80 text-slate-300">
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">1</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">All X-Rays</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;50 <span class="text-slate-500 font-normal text-xs">per exposure</span></td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;80 <span class="text-slate-500 font-normal text-xs">per exposure</span></td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;120 <span class="text-slate-500 font-normal text-xs">per exposure</span></td>
                 </tr>
                 <tr class="hover:bg-slate-800/30 transition-colors">
                   <td class="pl-6 pr-2 py-3 text-slate-500 tabular-nums text-xs">2</td>
                   <th scope="row" class="px-3 py-3 font-medium text-white">Special X-Rays</th>
-                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;200</td>
+                  <td class="px-3 py-3 text-right font-semibold text-white tabular-nums whitespace-nowrap">&#8377;250</td>
+                  <td class="pl-3 pr-6 py-3 text-right font-semibold text-rose-300 tabular-nums whitespace-nowrap">&#8377;350</td>
                 </tr>
             </tbody>
           </table>
