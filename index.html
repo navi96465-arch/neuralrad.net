@@ -838,7 +838,7 @@
 
   <!-- ================= RATE CARD (PER-STUDY PRICING) ================= -->
   <!-- Source: NeuralRad Teleradiology Reporting Rate Card (neuralrad-rate-card.pdf) -->
-  <section id="rates" class="py-24 border-t border-slate-800 relative" aria-labelledby="rates-heading">
+  <section id="rates" class="py-24 border-t border-slate-800 relative scroll-mt-20" aria-labelledby="rates-heading" hidden>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
@@ -847,10 +847,16 @@
           <p id="rates-heading" class="font-display text-3xl sm:text-4xl font-extrabold text-white">Reporting Rate Card (INR)</p>
           <p class="text-slate-400 text-sm mt-2 max-w-2xl">Reliable 24&times;7 teleradiology reporting by qualified radiologists on BharatPACS. Flat per-study rates for CT, MRI and X-Ray.</p>
         </div>
-        <a href="/neuralrad-rate-card.pdf" download class="inline-flex items-center gap-2 self-start md:self-auto px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-200 bg-slate-800/90 hover:bg-slate-700/80 border border-slate-700 transition-colors">
-          <i data-lucide="download" class="w-4 h-4 text-brand-400"></i>
-          <span>Download PDF</span>
-        </a>
+        <div class="flex items-center gap-2 self-start md:self-auto">
+          <a href="/neuralrad-rate-card.pdf" download class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-200 bg-slate-800/90 hover:bg-slate-700/80 border border-slate-700 transition-colors">
+            <i data-lucide="download" class="w-4 h-4 text-brand-400"></i>
+            <span>Download PDF</span>
+          </a>
+          <button type="button" id="rates-close" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-slate-800/80 border border-slate-800 transition-colors">
+            <i data-lucide="x" class="w-4 h-4"></i>
+            <span>Hide</span>
+          </button>
+        </div>
       </div>
 
       <!-- Key Terms -->
@@ -1239,6 +1245,27 @@
             select(t); t.focus();
           });
         });
+
+        var section = document.getElementById('rates');
+        function showRates(scroll) {
+          section.hidden = false;
+          if (scroll) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        document.querySelectorAll('a[href="#rates"]').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            showRates(true);
+            history.replaceState(null, '', '#rates');
+          });
+        });
+        document.getElementById('rates-close').addEventListener('click', function () {
+          section.hidden = true;
+          history.replaceState(null, '', location.pathname + location.search);
+        });
+        window.addEventListener('hashchange', function () {
+          if (location.hash === '#rates') showRates(true);
+        });
+        if (location.hash === '#rates') showRates(true);
       })();
     </script>
   </section>
